@@ -78,8 +78,6 @@ header, main, footer{
     letter-spacing: 4px;
 }
 
-/* ── MAIN ── */
-
 main{
     flex: 1;
     display: flex;
