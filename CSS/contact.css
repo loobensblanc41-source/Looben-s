@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-image: url("../IMG/Gemini_Generated_Image_sgoa5hsgoa5hsgoa.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.navbar{
+    width: 100%;
+    background-color: #2D5016;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.navbar h2{
+    color: white;
+}
+
+.navbar nav{
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover{
+    color: #D4B896;
+}
+
+.titre{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 4px;
+}
+
+main{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+
+.box11{
+    background-color: #2D5016;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+
+
+.formu{
+    width: min(90%, 500px);
+    background-color: rgba(255,255,255,0.95);
+    padding: 30px;
+    border: 2px solid #D4B896;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.lab{
+    margin-bottom: 15px;
+}
+
+.label-icon{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.label-icon img{
+    width: 20px;
+    height: 20px;
+}
+
+.label-icon label{
+    margin-bottom: 0;
+}
+
+label{
+    color: #2D5016;
+    font-weight: bold;
+}
+
+input,
+textarea,
+select{
+    width: 100%;
+
+    padding: 12px;
+
+    border: 2px solid #D4B896;
+    border-radius: 8px;
+
+    background-color: white;
+
+    font-size: 15px;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    outline: none;
+    border-color: #2D5016;
+    box-shadow: 0 0 8px rgba(45,80,22,0.3);
+}
+
+textarea{
+    min-height: 120px;
+    resize: vertical;
+}
+
+
+button{
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2D5016;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: #3b6720;
+    transform: translateY(-2px);
+}
+
+
+
+footer{
+    width: 100%;
+    background-color: #2D5016;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-links{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links a{
+    color: #D4B896;
+    text-decoration: none;
+}
+
+.footer-links a:hover{
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 768px){
+
+    .navbar{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar nav{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .formu{
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px){
+
+    .box11{
+        width: 100%;
+        text-align: center;
+    }
+
+    .box11 h1{
+        font-size: 1.5rem;
+    }
+
+    .footer-links{
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .formu{
+        padding: 15px;
+    }
+}
+
