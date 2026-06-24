@@ -13,16 +13,32 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:  rgba(0, 0, 0, 0.45);
+    z-index: 0;
+}
+
+header, main, footer{
+    position: relative;
+    z-index: 1;
 }
 
 
 .navbar{
     width: 100%;
-    background-color: #2D5016;
+    background-color: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
+    border-bottom: 1px solid rgba(212, 184, 150, 0.25);
 }
 
 .logo{
@@ -30,6 +46,7 @@ body{
     align-items: center;
     gap: 10px;
 }
+
 .navbar h2{
     color: white;
 }
@@ -40,7 +57,7 @@ body{
 }
 
 .navbar a{
-    color: white;
+    color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
     font-weight: bold;
 }
@@ -65,26 +82,55 @@ main{
     padding: 20px;
 }
 
-
-
 .box11{
-    background-color: #2D5016;
-    color: white;
-    padding: 20px 40px;
-    border-radius: 10px;
+    text-align: center;
     margin-bottom: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
+.box11 h1{
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: white;
+    font-family: Georgia, serif;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.box11 h1::after{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #D4B896;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
 
 
 .formu{
     width: min(90%, 500px);
-    background-color: rgba(255,255,255,0.95);
-    padding: 30px;
-    border: 2px solid #D4B896;
+    background-color: rgba(255, 255, 255, 0.97);
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    overflow: hidden;
+    border: 1px solid rgba(212, 184, 150, 0.4);
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.3);
+}
+
+.formu::before{
+    content: "Réponse garantie sous 24h";
+    display: block;
+    background-color: #2D5016;
+    color: rgba(212, 184, 150, 0.9);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 11px 20px;
+    text-transform: uppercase;
+}
+
+.formu form{
+    padding: 28px;
 }
 
 .lab{
@@ -99,8 +145,9 @@ main{
 }
 
 .label-icon img{
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
+    opacity: 0.55;
 }
 
 .label-icon label{
@@ -110,21 +157,22 @@ main{
 label{
     color: #2D5016;
     font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 0.5px;
 }
 
 input,
 textarea,
 select{
     width: 100%;
-
-    padding: 12px;
-
-    border: 2px solid #D4B896;
+    padding: 11px 14px;
+    border: 1.5px solid #e0d5c5;
     border-radius: 8px;
-
-    background-color: white;
-
-    font-size: 15px;
+    background-color: #fafaf8;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 input:focus,
@@ -132,7 +180,8 @@ textarea:focus,
 select:focus{
     outline: none;
     border-color: #2D5016;
-    box-shadow: 0 0 8px rgba(45,80,22,0.3);
+    box-shadow: 0 0 0 3px rgba(45, 80, 22, 0.1);
+    background-color: white;
 }
 
 textarea{
@@ -140,18 +189,29 @@ textarea{
     resize: vertical;
 }
 
+select{
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%232D5016' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+    cursor: pointer;
+}
 
 button{
     width: 100%;
-    padding: 12px;
+    padding: 13px;
     border: none;
     border-radius: 8px;
     background-color: #2D5016;
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background-color 0.2s, transform 0.15s;
+    margin-top: 4px;
 }
 
 button:hover{
@@ -163,28 +223,14 @@ button:hover{
 
 footer{
     width: 100%;
-    background-color: #2D5016;
-    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    border-top: 1px solid rgba(212, 184, 150, 0.2);
+    color: rgba(255, 255, 255, 0.65);
     text-align: center;
     padding: 20px;
+    font-size: 13px;
 }
-
-.footer-links{
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.footer-links a{
-    color: #D4B896;
-    text-decoration: none;
-}
-
-.footer-links a:hover{
-    text-decoration: underline;
-}
-
 
 
 @media (max-width: 768px){
@@ -199,20 +245,15 @@ footer{
         justify-content: center;
     }
 
-    .formu{
+    .formu form{
         padding: 20px;
     }
 }
 
 @media (max-width: 480px){
 
-    .box11{
-        width: 100%;
-        text-align: center;
-    }
-
     .box11 h1{
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
 
     .footer-links{
@@ -220,8 +261,7 @@ footer{
         gap: 8px;
     }
 
-    .formu{
+    .formu form{
         padding: 15px;
     }
 }
-

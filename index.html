@@ -1,101 +1,207 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LakAI - Agence Immobilière</title>
 
-    <link rel="icon" href="webfonts/house.svg">
-    <link rel="stylesheet" href="CSS/style.css">
-</head>
+    <link rel="icon" href="webfonts/house.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
 
-<body>
-
-<header class="navbar">
-
-    <div class="logo">
+  <body>
+    <header class="navbar">
+      <div class="logo">
         <a href="index.html">
-            <img src="IMG/logo-navbar.svg" alt="LakAI" height="70">
+          <img src="IMG/logo-navbar.svg" alt="LakAI" height="70" />
         </a>
-    </div>
+      </div>
 
-    <nav>
+      <nav>
         <a href="index.html">Accueil</a>
         <a href="apropos.html">À propos</a>
         <a href="propriete.html">Propriétés</a>
         <a href="estimation.html">Estimation</a>
         <a href="contact.html">Contact</a>
-    </nav>
+      </nav>
+    </header>
 
-</header>
+    <main class="hero">
+      <div class="hero-content">
+        <span class="hero-subtitle"> VOTRE FUTUR CHEZ-VOUS COMMENCE ICI </span>
 
-<main class="hero">
-
-    <div class="hero-content">
-
-        <span class="hero-subtitle">
-            VOTRE FUTUR CHEZ-VOUS COMMENCE ICI
-        </span>
-
-        <h1>
-            Bienvenue chez LakAI
-        </h1>
+        <h1>Bienvenue chez LakAI</h1>
 
         <p>
-            Découvrez des propriétés sélectionnées avec soin et bénéficiez
-            d'un accompagnement professionnel pour acheter, vendre ou louer
-            votre bien immobilier aux Cayes et partout en Haïti.
+          Découvrez des propriétés sélectionnées avec soin et bénéficiez d'un
+          accompagnement professionnel pour acheter, vendre ou louer votre bien
+          immobilier aux Cayes et partout en Haïti.
         </p>
 
         <div class="hero-buttons">
+          <a href="propriete.html" class="btn1"> Voir les propriétés </a>
 
-            <a href="propriete.html" class="btn1">
-                Voir les propriétés
-            </a>
+          <a href="contact.html" class="btn2"> Nous contacter </a>
+        </div>
+      </div>
+    </main>
 
-            <a href="contact.html" class="btn2">
-                Nous contacter
-            </a>
-
+    <section class="svc-section">
+      <div class="svc-inner">
+        <div class="svc-header">
+          <h2>Nos Services</h2>
+          <p>
+            Un accompagnement complet pour chaque étape de votre projet
+            immobilier aux Cayes et partout en Haïti.
+          </p>
         </div>
 
-    </div>
+        <div class="svc-grid">
+          <div class="svc-card">
+            <div class="svc-icon">
+              <img src="Webfonts/house.svg" alt="" />
+            </div>
+            <h3>Achat & Vente</h3>
+            <p>
+              Trouvez la maison de vos rêves ou vendez votre propriété au
+              meilleur prix du marché.
+            </p>
+            <a href="propriete.html" class="svc-link">En savoir plus →</a>
+          </div>
 
-</main>
-
-<section class="services">
-    <div class="box11">
-        <h2>Nos Services</h2>
-    </div>
-
-    <div class="service-cards">
-
-        <div class="service-card">
-            <img src="Webfonts/house.svg" alt="Service 1" width="40" height="40">
-            <h3>Achat et Vente</h3>
-            <p>Nous vous aidons à trouver la maison de vos rêves ou à vendre votre propriété au meilleur prix.</p>
-        </div>
-
-        <div class="service-card">
-            <img src="Webfonts/key.svg" alt="Service 2" width="40" height="40">
+          <div class="svc-card">
+            <div class="svc-icon">
+              <img src="Webfonts/key.svg" alt="" />
+            </div>
             <h3>Location</h3>
-            <p>Découvrez une large sélection de propriétés à louer, adaptées à tous les besoins et budgets.</p>
-        </div>
+            <p>
+              Une large sélection de propriétés à louer, adaptées à tous les
+              besoins et budgets.
+            </p>
+            <a href="propriete.html" class="svc-link">En savoir plus →</a>
+          </div>
 
-        <div class="service-card">
-            <img src="Webfonts/chart-line.svg" alt="Service 3" width="40" height="40">
+          <div class="svc-card">
+            <div class="svc-icon">
+              <img src="Webfonts/chart-line.svg" />
+            </div>
             <h3>Estimation Immobilière</h3>
-            <p>Obtenez une estimation précise de la valeur de votre bien grâce à notre expertise locale.</p>
+            <p>
+              Obtenez une estimation précise grâce à notre expertise locale
+              reconnue aux Cayes.
+            </p>
+            <a href="estimation.html" class="svc-link">En savoir plus →</a>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
+    <section class="property-preview">
+      <div class="section-header">
+        <h2>Propriétés à Louer</h2>
+        <p>Découvrez quelques-unes de nos locations disponibles.</p>
+      </div>
 
-</section>
+      <div class="property-grid">
+        <article class="property-card">
+          <img src="IMG/propriete a louer 1.png" alt="Maison à louer" />
 
-<footer>
-    <p>&copy; 2026 Lakay Agence Immobilière. Tous droits réservés.</p>
-    <p>Les Cayes, Haïti</p>
-</footer>
+          <div class="property-content">
+            <h3>Maison Moderne</h3>
+            <p class="property-info"> Les Cayes</p>
+            <p class="property-info"> 150 m²</p>
+            <p class="property-price">45 000 HTG / mois</p>
+          </div>
+        </article>
 
-</body>
+        <article class="property-card">
+          <img src="IMG/propriete a louer 2.png" alt="Appartement à louer" />
+
+          <div class="property-content">
+            <h3>Appartement Familial</h3>
+            <p class="property-info"> Bergeaud</p>
+            <p class="property-info"> 110 m²</p>
+            <p class="property-price">35 000 HTG / mois</p>
+          </div>
+        </article>
+
+        <article class="property-card">
+          <img src="IMG/villa.png" alt="Villa à louer" />
+
+          <div class="property-content">
+            <h3>Villa avec Piscine</h3>
+            <p class="property-info"> Torbeck</p>
+            <p class="property-info"> 220 m²</p>
+
+            <p class="property-price">65 000 HTG / mois</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="property-btn">
+        <a href="location.html" class="btn1"> Voir toutes les locations </a>
+      </div>
+    </section>
+
+
+
+     <section class="sale-preview">
+      <div class="section-header">
+        <h2>Propriétés à Vendre</h2>
+        <p>Découvrez quelques-unes des proprietes a vendre.</p>
+      </div>
+
+      <div class="property-grid">
+        <article class="property-card">
+          <img src="IMG/propriete a louer 1.png" alt="Maison à louer" />
+
+          <div class="property-content">
+            <h3>Maison Moderne</h3>
+            <p class="property-info"> Les Cayes</p>
+            <p class="property-info"> 150 m²</p>
+            <p class="property-price">45 000 HTG / mois</p>
+          </div>
+        </article>
+
+        <article class="property-card">
+          <img src="IMG/propriete a louer 2.png" alt="Appartement à louer" />
+
+          <div class="property-content">
+            <h3>Appartement Familial</h3>
+            <p class="property-info"> Bergeaud</p>
+            <p class="property-info"> 110 m²</p>
+            <p class="property-price">35 000 HTG / mois</p>
+          </div>
+        </article>
+
+        <article class="property-card">
+          <img src="IMG/villa.png" alt="Villa à louer" />
+
+          <div class="property-content">
+            <h3>Villa avec Piscine</h3>
+            <p class="property-info"> Torbeck</p>
+            <p class="property-info"> 220 m²</p>
+
+            <p class="property-price">65 000 HTG / mois</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="property-btn">
+        <a href="proprietes.html" class="btn1"> Voir toutes les propriétés </a>
+      </div>
+    </section>
+
+
+    <footer>
+      <p>&copy; 2026 Lakay Agence Immobilière. Tous droits réservés.</p>
+      <p>Les Cayes, Haïti</p>
+    </footer>
+  </body>
 </html>
