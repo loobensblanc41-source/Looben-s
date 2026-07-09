@@ -70,7 +70,7 @@ h3 {
 
 
 .hero {
-  min-height: 100vh;
+  min-height: 60vh;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
     url("../IMG/Gemini_Generated_Image_sgoa5hsgoa5hsgoa.png");
@@ -98,6 +98,7 @@ h3 {
 
 .hero-content {
   max-width: 850px;
+  padding-top: 50px;
 }
 
 .hero-subtitle {
