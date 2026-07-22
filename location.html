@@ -32,8 +32,8 @@
       <nav>
         <a href="index.html">Accueil</a>
         <a href="apropos.html">À propos</a>
-        <a href="location.html">Locations</a>
-        <a href="proprietes.html">Ventes</a>
+        <a href="location.html" class="active">Location</a>
+        <a href="proprietes.html">Vente</a>
         <a href="estimations.html">Estimation</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -122,165 +122,286 @@
       </form>
     </section>
 
-    <section class="property-preview" id="balcon">
+    <!-- Filtres par categorie (100% CSS, aucun JavaScript) -->
+    <input type="radio" name="filtre-categorie" id="cat-tous" class="filtre-input" checked>
+    <input type="radio" name="filtre-categorie" id="cat-piscine" class="filtre-input">
+    <input type="radio" name="filtre-categorie" id="cat-chambres" class="filtre-input">
+    <input type="radio" name="filtre-categorie" id="cat-jardin" class="filtre-input">
+    <input type="radio" name="filtre-categorie" id="cat-balcon" class="filtre-input">
+    <input type="radio" name="filtre-categorie" id="cat-vues" class="filtre-input">
+    <input type="radio" name="filtre-categorie" id="cat-mer" class="filtre-input">
+
+    <section class="filtres-rapides">
+      <div class="filtres-categories">
+        <label for="cat-tous" class="btn-filtre">Tous</label>
+        <label for="cat-piscine" class="btn-filtre">Avec piscine</label>
+        <label for="cat-chambres" class="btn-filtre">2 chambres et +</label>
+        <label for="cat-jardin" class="btn-filtre">Avec jardin</label>
+        <label for="cat-balcon" class="btn-filtre">Avec balcon</label>
+        <label for="cat-vues" class="btn-filtre">Avec vue</label>
+        <label for="cat-mer" class="btn-filtre">Bord de mer</label>
+      </div>
+    </section>
+
+    <section class="property-preview" id="liste-locations">
       <div class="section-header">
-        <h2>Maisons avec balcon</h2>
-        <p>Profitez d'une vue agréable et d'espaces extérieurs confortables.</p>
+        <h2>Nos locations disponibles</h2>
+        <p>Utilisez les filtres ci-dessus pour affiner votre recherche.</p>
       </div>
 
-      <div class="property-grid">
-        <!-- Article 1 -->
-        <article class="property-card">
-          <img src="IMG/propriete a louer 1.png" alt="Villa avec balcon" />
+      <input type="checkbox" id="voir-plus" class="voir-plus-checkbox">
 
+      <div class="property-grid">
+        <article class="property-card cat-piscine">
+          <img src="IMG/Maison 1.png" alt="Villa avec balcon" />
           <div class="property-content">
-            <h3>Villa avec balcon</h3>
+            <h3>Villa avec Piscine</h3>
             <p class="property-info">Les Cayes</p>
             <p class="property-info">180 m²</p>
             <p class="property-price">45 000 HTG / mois</p>
-
-            <button
-              class="btn btn-primary mt-2"
-              data-bs-toggle="modal"
-              data-bs-target="#maison1"
-            >
-              Voir détails
-            </button>
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#maison1">Voir détails</button>
           </div>
         </article>
-        <!-- Article 2 -->
-        <article class="property-card">
-          <img src="IMG/image2_maison.jpg" alt="Appartement moderne" />
-
+        <article class="property-card cat-piscine">
+          <img src="IMG/Maison 2.png" alt="Appartement moderne" />
+          <div class="property-content">
+            <h3>Appartement moderne avec Piscine</h3>
+            <p class="property-info">Camp-Perrin</p>
+            <p class="property-info">90 m²</p>
+            <p class="property-price">9 000 HTG / mois</p>
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#maison2">Voir détails</button>
+          </div>
+        </article>
+        <article class="property-card cat-piscine extra">
+          <img src="IMG/Maison 3.png" alt="Maison familiale" />
+          <div class="property-content">
+            <h3>Maison Familiale</h3>
+            <p class="property-info">Bergeaud</p>
+            <p class="property-info">130 m²</p>
+            <p class="property-price">30 000 HTG / mois</p>
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#maison3">Voir détails</button>
+          </div>
+        </article>
+        <article class="property-card cat-piscine extra">
+          <img src="IMG/Maison4.png" alt="Appartement moderne" />
           <div class="property-content">
             <h3>Appartement moderne</h3>
-            <p class="property-info">Bergeaud</p>
-            <p class="property-info">120 m²</p>
-            <p class="property-price">30 000 HTG / mois</p>
-
-            <button
-              class="btn btn-primary mt-2"
-              data-bs-toggle="modal"
-              data-bs-target="#maison2"
-            >
-              Voir détails
-            </button>
+            <p class="property-info">Torbeck</p>
+            <p class="property-info">80 m²</p>
+            <p class="property-price">8 000 HTG / mois</p>
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#maison4">Voir détails</button>
           </div>
         </article>
-
-        <!-- Article 3 -->
-        <article class="property-card">
-          <img src="IMG/image2_maison.jpg" alt="Appartement moderne" />
-
-          <div class="property-content">
-            <h3>Appartement moderne</h3>
-            <p class="property-info">Bergeaud</p>
-            <p class="property-info">120 m²</p>
-            <p class="property-price">30 000 HTG / mois</p>
-
-            <button
-              class="btn btn-primary mt-2"
-              data-bs-toggle="modal"
-              data-bs-target="#maison3"
-            >
-              Voir détails
-            </button>
-          </div>
-        </article>
-
-        <!-- Article 4 -->
-        <article class="property-card">
-          <img src="IMG/image2_maison.jpg" alt="Appartement moderne" />
-
-          <div class="property-content">
-            <h3>Appartement moderne</h3>
-            <p class="property-info">Bergeaud</p>
-            <p class="property-info">120 m²</p>
-            <p class="property-price">30 000 HTG / mois</p>
-
-            <button
-              class="btn btn-primary mt-2"
-              data-bs-toggle="modal"
-              data-bs-target="#maison4"
-            >
-              Voir détails
-            </button>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <section class="sale-preview">
-      <div class="section-header">
-        <h2>Maisons avec deux chambres et plus</h2>
-        <p>Idéal pour les familles recherchant plus d'espace.</p>
-      </div>
-
-      <div class="property-grid">
-        <!-- Article 5 -->
-        <article class="property-card">
-          <img src="IMG/image6_maison.jpg" alt="Maison 2 chambres" />
-
+        <article class="property-card cat-chambres">
+          <img src="IMG/Maison5.png" alt="Maison 5" />
           <div class="property-content">
             <h3>Maison 2 chambres</h3>
             <p class="property-info">Bergeaud</p>
-            <p class="property-info">160 m²</p>
+            <p class="property-info">140 m²</p>
             <p class="property-price">42 000 HTG / mois</p>
-
-            <button
-              class="btn btn-primary mt-2"
-              data-bs-toggle="modal"
-              data-bs-target="#maison5"
-            >
-              Voir détails
-            </button>
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#maison5">Voir détails</button>
           </div>
         </article>
-
-        <!-- Article 6 -->
-        <article class="property-card">
-          <img src="IMG/image3_maison.jpg" alt="Maison 3 chambres" />
-
+        <article class="property-card cat-chambres">
+          <img src="IMG/Maison6.png" alt="Maison 6" />
           <div class="property-content">
             <h3>Maison 3 chambres</h3>
             <p class="property-info">Torbeck</p>
             <p class="property-info">220 m²</p>
             <p class="property-price">55 000 HTG / mois</p>
-
-            <button
-              class="btn btn-primary mt-2"
-              data-bs-toggle="modal"
-              data-bs-target="#maison6"
-            >
-              Voir détails
-            </button>
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#maison6">Voir détails</button>
           </div>
         </article>
-
-        <!-- Article 7 -->
-        <article class="property-card">
-          <img src="IMG/image3_maison.jpg" alt="Maison 3 chambres" />
-
+        <article class="property-card cat-chambres extra">
+          <img src="IMG/Maison7.png" alt="Maison 7" />
           <div class="property-content">
-            <h3>Maison 3 chambres</h3>
-            <p class="property-info">Torbeck</p>
-            <p class="property-info">220 m²</p>
-            <p class="property-price">55 000 HTG / mois</p>
-
-            <button
-              class="btn btn-primary mt-2"
-              data-bs-toggle="modal"
-              data-bs-target="#maison7"
-            >
-              Voir détails
-            </button>
+            <h3>Maison 4 chambres</h3>
+            <p class="property-info">Les Cayes</p>
+            <p class="property-info">320 m²</p>
+            <p class="property-price">80 000 HTG / mois</p>
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#maison7">Voir détails</button>
           </div>
         </article>
+        <article class="property-card cat-chambres extra">
+          <img src="IMG/Maisonavecpiscine.png" alt="Maison 8" />
+          <div class="property-content">
+            <h3>Maison 2 chambres</h3>
+            <p class="property-info">Camp-Perrin</p>
+            <p class="property-info">250 m²</p>
+            <p class="property-price">55 000 HTG / mois</p>
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#maison8">Voir détails</button>
+          </div>
+        </article>
+        <article class="property-card cat-jardin">
+          <img src="IMG/Maison4_01_Exterieur_Jardin.png" alt="Maison 9" />
+          <div class="property-content">
+            <h3>Maison avec potager</h3>
+            <p class="property-info">Camp-Perrin</p>
+            <p class="property-info">250 m²</p>
+            <p class="property-price">60 000 HTG / mois</p>
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#maison9">Voir détails</button>
+          </div>
+        </article>
+        <article class="property-card cat-jardin">
+          <img src="IMG/Maison1_01_Exterieur_Jardin.png" alt="Maison 10" />
+          <div class="property-content">
+            <h3>Maison avec Bordure</h3>
+            <p class="property-info">Arniquet</p>
+            <p class="property-info">230 m²</p>
+            <p class="property-price">60 000 HTG / mois</p>
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#maison10">Voir détails</button>
+          </div>
+        </article>
+        <article class="property-card cat-jardin extra">
+          <img src="IMG/Maison2_01_Exterieur_Jardin.png" alt="Maison 11" />
+          <div class="property-content">
+            <h3>Maison avec grande Jardin</h3>
+            <p class="property-info">Maniche</p>
+            <p class="property-info">300 m²</p>
+            <p class="property-price">95 000 HTG / mois</p>
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#maison11">Voir détails</button>
+          </div>
+        </article>
+        <article class="property-card cat-jardin extra">
+          <img src="IMG/Maison3_01_Exterieur_Jardin.png" alt="Maison 12" />
+          <div class="property-content">
+            <h3>Maison avec Jardin</h3>
+            <p class="property-info">Les Cayes</p>
+            <p class="property-info">150 m²</p>
+            <p class="property-price">10 000 HTG / mois</p>
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#maison12">Voir détails</button>
+          </div>
+        </article>
+        <article class="property-card cat-balcon">
+          <img src="IMG/Maison7_exterieur.png" alt="Maison13" />
+          <div class="property-content">
+            <h3>Maison Avec Balcon</h3>
+            <p class="property-info">Chantal</p>
+            <p class="property-info">100 m²</p>
+            <p class="property-price">9 000 HTG / mois</p>
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#maison13">Voir détails</button>
+          </div>
+        </article>
+        <article class="property-card cat-balcon">
+          <img src="IMG/Maison8_exterieur.png" alt="Maison 14" />
+          <div class="property-content">
+            <h3>Maison Avec Balcon</h3>
+            <p class="property-info">Laurent</p>
+            <p class="property-info">120 m²</p>
+            <p class="property-price">11 000 HTG / mois</p>
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#maison14">Voir détails</button>
+          </div>
+        </article>
+        <article class="property-card cat-balcon extra">
+          <img src="IMG/Maison15_1.png" alt="Maison 15" />
+          <div class="property-content">
+            <h3>Maison avec Balcon</h3>
+            <p class="property-info">Camp-Perrin</p>
+            <p class="property-info">130 m²</p>
+            <p class="property-price">12 000 HTG / mois</p>
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#maison15">Voir détails</button>
+          </div>
+        </article>
+        <article class="property-card cat-balcon extra">
+          <img src="IMG/Maison16_1.png" alt="Maison 16" />
+          <div class="property-content">
+            <h3>Maison avec Balcon</h3>
+            <p class="property-info">Les Cayes</p>
+            <p class="property-info">90 m²</p>
+            <p class="property-price">8 000 HTG / mois</p>
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#maison16">Voir détails</button>
+          </div>
+        </article>
+        <article class="property-card cat-vues">
+          <img src="IMG/Maison17_1.png" alt="Maison 17" />
+          <div class="property-content">
+            <h3>Maison avec vue</h3>
+            <p class="property-info">Coteaux</p>
+            <p class="property-info">120 m²</p>
+            <p class="property-price">10 000 HTG / mois</p>
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#maison17">Voir détails</button>
+          </div>
+        </article>
+        <article class="property-card cat-vues">
+          <img src="IMG/Maison18_1.png" alt="Maison 18" />
+          <div class="property-content">
+            <h3>Maison avec vue</h3>
+            <p class="property-info">Coteaux</p>
+            <p class="property-info">100 m²</p>
+            <p class="property-price">9 000 HTG / mois</p>
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#maison18">Voir détails</button>
+          </div>
+        </article>
+        <article class="property-card cat-vues extra">
+          <img src="IMG/Maison19_1.png" alt="Maison 19" />
+          <div class="property-content">
+            <h3>Maison avec vue</h3>
+            <p class="property-info">Les Anglais</p>
+            <p class="property-info">110 m²</p>
+            <p class="property-price">9 500 HTG / mois</p>
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#maison19">Voir détails</button>
+          </div>
+        </article>
+        <article class="property-card cat-vues extra">
+          <img src="IMG/Maison20_1.png" alt="Maison 20" />
+          <div class="property-content">
+            <h3>Maison avec vue</h3>
+            <p class="property-info">Tiburon</p>
+            <p class="property-info">150 m²</p>
+            <p class="property-price">15 000 HTG / mois</p>
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#maison20">Voir détails</button>
+          </div>
+        </article>
+        <article class="property-card cat-mer">
+          <img src="IMG/Maison21_1.png" alt="Villa21" />
+          <div class="property-content">
+            <h3>Maison au bord de la mer</h3>
+            <p class="property-info">Les Cayes</p>
+            <p class="property-info">150 m²</p>
+            <p class="property-price">30 000 HTG / mois</p>
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#maison21">Voir détails</button>
+          </div>
+        </article>
+        <article class="property-card cat-mer">
+          <img src="IMG/Maison22_1.png" alt="Appartement22" />
+          <div class="property-content">
+            <h3>Villa</h3>
+            <p class="property-info">Port-Salut</p>
+            <p class="property-info">250 m²</p>
+            <p class="property-price">100 000 HTG / mois</p>
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#maison22">Voir détails</button>
+          </div>
+        </article>
+        <article class="property-card cat-mer extra">
+          <img src="IMG/Maison23_1.png" alt="Maison23" />
+          <div class="property-content">
+            <h3>Appartement au bord de la mer</h3>
+            <p class="property-info">Port-Salut</p>
+            <p class="property-info">70 m²</p>
+            <p class="property-price">6 000 HTG / mois</p>
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#maison23">Voir détails</button>
+          </div>
+        </article>
+        <article class="property-card cat-mer extra">
+          <img src="IMG/Maison24_1.png" alt="villa24" />
+          <div class="property-content">
+            <h3>Maison moderne</h3>
+            <p class="property-info">Gelee</p>
+            <p class="property-info">190 m²</p>
+            <p class="property-price">60 000 HTG / mois</p>
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#maison24">Voir détails</button>
+          </div>
+        </article>
+      </div>
 
-       
+      <div class="voir-plus-zone">
+        <label for="voir-plus" class="btn-voir-plus">
+          <span class="txt-plus">Voir plus de maisons</span>
+          <span class="txt-moins">Voir moins</span>
+        </label>
       </div>
     </section>
+
 
     <!--Modifye pou chak article-->
 
@@ -289,7 +410,7 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Villa avec balcon</h5>
+            <h5 class="modal-title">Villa avec Piscine</h5>
             <button class="btn-close" data-bs-dismiss="modal"></button>
           </div>
 
@@ -298,25 +419,33 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img
-                    src="IMG/propriete a louer 1.png"
+                    src="IMG/Maison 1.png"
                     class="d-block w-100"
-                    alt=""
+                    alt="villa avec piscine"
                   />
                 </div>
 
                 <div class="carousel-item">
                   <img
-                    src="IMG/image5_maison.jpg"
+                    src="IMG/Salon.png"
                     class="d-block w-100"
-                    alt=""
+                    alt="Salon du villa"
                   />
                 </div>
 
                 <div class="carousel-item">
                   <img
-                    src="IMG/image6_maison.jpg"
+                    src="IMG/Maison1 cuisine et salleamanger.png"
                     class="d-block w-100"
-                    alt=""
+                    alt="Cuisine et salleamanger"
+                  />
+                </div> 
+
+                 <div class="carousel-item">
+                  <img
+                    src="IMG/Chambre.png"
+                    class="d-block w-100"
+                    alt="Chambre"
                   />
                 </div>
               </div>
@@ -363,11 +492,27 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img
-                    src="IMG/image1_maison.jpg"
+                    src="IMG/Salon Maison2.png"
                     class="d-block w-100"
-                    alt=""
+                    alt="Salon"
+                  /> 
+                </div> 
+
+                 <div class="carousel-item active">
+                  <img
+                    src="IMG/cuisine salleamanger Maison2.png"
+                    class="d-block w-100"
+                    alt="Cuisine et salleamanger"
                   />
-                </div>
+                </div> 
+
+                 <div class="carousel-item active">
+                  <img
+                    src="IMG/Chambre Maison2.png"
+                    class="d-block w-100"
+                    alt="Chambre"
+                  />
+                </div> 
               </div>
 
               <button
@@ -410,19 +555,45 @@
           <div class="modal-body">
             <div id="carouselMaison3" class="carousel slide">
               <div class="carousel-inner">
-                <div class="carousel-item active">
+               <div class="carousel-item active">
                   <img
-                    src="IMG/image2_maison.jpg"
+                    src="IMG/Salon Maison3.png"
                     class="d-block w-100"
-                    alt=""
+                    alt="Salon"
                   />
-                </div>
+                </div> 
 
-                <div class="carousel-item">
+                 <div class="carousel-item active">
                   <img
-                    src="IMG/image1_maison.jpg"
+                    src="IMG/cuisine et salleamanger Maison3.png"
                     class="d-block w-100"
-                    alt=""
+                    alt="Cuisine et salleamanger"
+                  />
+                </div> 
+
+                 <div class="carousel-item active">
+                  <img
+                    src="IMG/Chambres Principale Maison 3.png"
+                    class="d-block w-100"
+                    alt="Chambre"
+                  />
+                </div> 
+
+                
+                 <div class="carousel-item active">
+                  <img
+                    src="IMG/Chambres d'enfants Maison3.png"
+                    class="d-block w-100"
+                    alt="Chambre"
+                  />
+                </div> 
+
+                
+                 <div class="carousel-item active">
+                  <img
+                    src="IMG/Chambres d'invitee.png"
+                    class="d-block w-100"
+                    alt="Chambre"
                   />
                 </div>
               </div>
@@ -469,18 +640,25 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img
-                    src="IMG/image6_maison.jpg"
+                    src="IMG/Maison_salon.png"
                     class="d-block w-100"
-                    alt=""
+                    alt="Salon"
                   />
                 </div>
 
                 <div class="carousel-item">
                   <img
-                    src="IMG/image5_maison.jpg"
+                    src="IMG/Maison4_salleamangercuisine.png"
                     class="d-block w-100"
-                    alt=""
+                    alt="Maison4_salleamangercuisine"
                   />
+                </div> 
+
+                <div class="carousel-item active">
+                  <img src="IMG/Maison4_Chambres.png"
+                  class="d-block w-100"
+                   alt="Chambre"
+                   />
                 </div>
               </div>
 
@@ -517,7 +695,7 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Maison 3 chambres</h5>
+            <h5 class="modal-title">Maison 2 chambres</h5>
             <button class="btn-close" data-bs-dismiss="modal"></button>
           </div>
 
@@ -526,17 +704,34 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img
-                    src="IMG/image3_maison.jpg"
+                    src="IMG/Maison5_salon.png"
                     class="d-block w-100"
-                    alt=""
+                    alt="Salon"
                   />
                 </div>
 
                 <div class="carousel-item">
                   <img
-                    src="IMG/image2_maison.jpg"
+                    src="IMG/Maison5_cuisinesalleamanger.png"
                     class="d-block w-100"
-                    alt=""
+                    alt="Maison5_cuisinesalleamanger"
+                  />
+                </div> 
+
+                 <div class="carousel-item active">
+                  <img
+                    src="IMG/Maison5_Chambre1.png"
+                    class="d-block w-100"
+                    alt="Chambre"
+                  />
+                </div> 
+
+
+                 <div class="carousel-item active">
+                  <img
+                    src="IMG/Maison5_Chambre2.png"
+                    class="d-block w-100"
+                    alt="Chambre"
                   />
                 </div>
               </div>
@@ -561,8 +756,8 @@
             </div>
 
             <p class="mt-4"><strong>Adresse :</strong> Torbeck</p>
-            <p><strong>Surface :</strong> 220 m²</p>
-            <p><strong>Prix :</strong> 55 000 HTG / mois</p>
+            <p><strong>Surface :</strong> 140 m²</p>
+            <p><strong>Prix :</strong> 42 000 HTG / mois</p>
             <p><strong>Contact :</strong> +509 0000 0000</p>
           </div>
         </div>
@@ -583,17 +778,32 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img
-                    src="IMG/image3_maison.jpg"
+                    src="IMG/Maison6_Salon.png"
                     class="d-block w-100"
-                    alt=""
+                    alt="Salon"
                   />
                 </div>
 
                 <div class="carousel-item">
                   <img
-                    src="IMG/image2_maison.jpg"
+                    src="IMG/Maison6_salleamangercuisine.png"
                     class="d-block w-100"
-                    alt=""
+                    alt="salleamangercuisine"
+                  />
+                </div> 
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Maison6_Chambre1.png"
+                    class="d-block w-100"
+                    alt="Chambre"
+                  />
+                </div>
+
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Maison6_Chambre2.png"
+                    class="d-block w-100"
+                    alt="Chambre"
                   />
                 </div>
               </div>
@@ -624,23 +834,492 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> 
 
-    <!-- Maison 7 -->
+     <!-- Maison 7 -->
     <div class="modal fade" id="maison7">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Maison 3 chambres</h5>
+            <h5 class="modal-title">Maison 4 chambres</h5>
             <button class="btn-close" data-bs-dismiss="modal"></button>
           </div>
 
           <div class="modal-body">
-            <div id="carouselMaison6" class="carousel slide">
+            <div id="carouselMaison7" class="carousel slide">
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img
-                    src="IMG/villa.png"
+                    src="IMG/Maison7_1_salon....png"
+                    class="d-block w-100"
+                    alt="Salon"
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Maison7_chambre_1_lit_baldaquin.png"
+                    class="d-block w-100"
+                    alt="chambre"
+                  />
+                </div> 
+
+                
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Maison7_chambre_2_lit_bleu.png"
+                    class="d-block w-100"
+                    alt="chambre"
+                  />
+                </div> 
+
+                
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Maison7_chambre_3_lits_jumeaux.png"
+                    class="d-block w-100"
+                    alt="chambre"
+                  />
+                </div> 
+
+                
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Maison7_chambre_4_lits_superposes.png"
+                    class="d-block w-100"
+                    alt="chambre"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison6"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison7"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong>  Les Cayes </p>
+            <p><strong>Surface :</strong> 320 m²</p>
+            <p><strong>Prix :</strong> 80 000 HTG / mois</p>
+            <p><strong>Contact :</strong> +509 0000 0000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- Maison 8 -->
+    <div class="modal fade" id="maison8">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">villa avec 2 Chambres</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison8" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/piscinecuisinesalleamangersalon.png"
+                    class="d-block w-100"
+                    alt="cuisinesalleamangersalon"
+                  />
+                </div>
+
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/piscine_chambre1.png"
+                    class="d-block w-100"
+                    alt="chambre"
+                  />
+                </div> 
+
+                <div class="carousel-item active">
+                  <img src="IMG/piscine_chambre2.png" 
+                  class="d-block w-100"
+                  alt="chambre"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison8"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison8"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Camp-Perrin</p>
+            <p><strong>Surface :</strong> 250 m²</p>
+            <p><strong>Prix :</strong> 55 000 HTG / mois</p>
+            <p><strong>Contact :</strong> +509 0000 0000</p>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+     <!-- Maison 9 -->
+    <div class="modal fade" id="maison9">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Maison avec potager</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison9" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Maison4_02_Aire_de_vie_Salon_Cuisine.png"
+                    class="d-block w-100"
+                    alt="Salon"
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Maison4_03_Chambre_Principale.png"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div> 
+
+                
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Maison4_05_Chambre_Double2.png"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div> 
+
+                
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Maison4_06_Chambre_Triple.png"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison9"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison9"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Camp-Perrin</p>
+            <p><strong>Surface :</strong> 250 m²</p>
+            <p><strong>Prix :</strong> 60 000 HTG / mois</p>
+            <p><strong>Contact :</strong> +509 0000 0000</p>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+     <!-- Maison 10 -->
+    <div class="modal fade" id="maison10">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Maison avec bordure</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison10" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Maison1_02_Salon.png"
+                    class="d-block w-100"
+                    alt="Salon"
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Maison1_03_Cuisine_SalleAManger.png"
+                    class="d-block w-100"
+                    alt="Cuisinesalleamanger"
+                  />
+                </div>
+              </div> 
+
+              
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Maison1_04_Chambre_Principale.png"
+                    class="d-block w-100"
+                    alt="Chambre"
+                  />
+                </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison10"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison10"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Arniquet</p>
+            <p><strong>Surface :</strong> 230 m²</p>
+            <p><strong>Prix :</strong> 60 000 HTG / mois</p>
+            <p><strong>Contact :</strong> +509 0000 0000</p>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+     <!-- Maison 11 -->
+    <div class="modal fade" id="maison11">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Maison avec grande jardin</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison11" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Maison1_02_Salon.png"
+                    class="d-block w-100"
+                    alt="Salon"
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Maison1_03_Cuisine_SalleAManger.png"
+                    class="d-block w-100"
+                    alt="Cuisinesalleamanger"
+                  />
+                </div> 
+
+                
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Maison1_04_Chambre_Principale.png"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison11"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison11"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Maniche</p>
+            <p><strong>Surface :</strong> 300 m²</p>
+            <p><strong>Prix :</strong> 95 000 HTG / mois</p>
+            <p><strong>Contact :</strong> +509 0000 0000</p>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+     <!-- Maison 12 -->
+    <div class="modal fade" id="maison12">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Maison avec Jardin</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison12" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Maison3_02_Chambre1.png"
+                    class="d-block w-100"
+                    alt="Chambre"
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Maison3_03_Chambre2.png"
+                    class="d-block w-100"
+                    alt="chambre"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison12"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison12"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Les Cayes</p>
+            <p><strong>Surface :</strong> 150 m²</p>
+            <p><strong>Prix :</strong> 10 000 HTG / mois</p>
+            <p><strong>Contact :</strong> +509 0000 0000</p>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+     <!-- Maison 13 -->
+    <div class="modal fade" id="maison13">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Maison avec Balcon</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison13" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Maiso7_salon.png"
+                    class="d-block w-100"
+                    alt="salon"
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src=""
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison13"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison13"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Chantal</p>
+            <p><strong>Surface :</strong> 100 m²</p>
+            <p><strong>Prix :</strong> 9 000 HTG / mois</p>
+            <p><strong>Contact :</strong> +509 0000 0000</p>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+     <!-- Maison 14 -->
+    <div class="modal fade" id="maison14">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Maison avec Balcon</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison14" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Maison8_salon.png"
                     class="d-block w-100"
                     alt=""
                   />
@@ -648,7 +1327,7 @@
 
                 <div class="carousel-item">
                   <img
-                    src="IMG/image2_maison.jpg"
+                    src=""
                     class="d-block w-100"
                     alt=""
                   />
@@ -667,27 +1346,610 @@
               <button
                 class="carousel-control-next"
                 type="button"
-                data-bs-target="#carouselMaison6"
+                data-bs-target="#carouselMaison14"
                 data-bs-slide="next"
               >
                 <span class="carousel-control-next-icon"></span>
               </button>
             </div>
 
-            <p class="mt-4"><strong>Adresse :</strong> Torbeck</p>
-            <p><strong>Surface :</strong> 220 m²</p>
-            <p><strong>Prix :</strong> 55 000 HTG / mois</p>
+            <p class="mt-4"><strong>Adresse :</strong> Laurent</p>
+            <p><strong>Surface :</strong> 120 m²</p>
+            <p><strong>Prix :</strong> 11 000 HTG / mois</p>
+            <p><strong>Contact :</strong> +509 0000 0000</p>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+     <!-- Maison 15 -->
+    <div class="modal fade" id="maison15">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Maison avec Balcon</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison15" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Maiso15_2.png"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Maison15_3.png"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div> 
+
+                
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Maiso15_4.png"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison15"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison15"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Camp-Perrin</p>
+            <p><strong>Surface :</strong> 130 m²</p>
+            <p><strong>Prix :</strong> 12 000 HTG / mois</p>
+            <p><strong>Contact :</strong> +509 0000 0000</p>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+      <!-- Maison 16 -->
+    <div class="modal fade" id="maison16">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Villa avec Balcon</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison16" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Maison16_2.png"
+                    class="d-block w-100"
+                    alt="villa avec piscine"
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Maison16_3.png"
+                    class="d-block w-100"
+                    alt="Salon du villa"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison16"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison16"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Les Cayes</p>
+            <p><strong>Surface :</strong> 90 m²</p>
+            <p><strong>Prix :</strong> 8 000 HTG / mois</p>
+            <p><strong>Contact :</strong> +509 0000 0000</p>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+      <!-- Maison 17 -->
+    <div class="modal fade" id="maison17">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Maison avec vue</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison17" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Maison17_2.png"
+                    class="d-block w-100"
+                    alt="salon"
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Maison17_3.png"
+                    class="d-block w-100"
+                    alt="Chambre"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison17"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison17"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Coteaux</p>
+            <p><strong>Surface :</strong> 120 m²</p>
+            <p><strong>Prix :</strong> 10 000 HTG / mois</p>
             <p><strong>Contact :</strong> +509 0000 0000</p>
           </div>
         </div>
       </div>
     </div>
+
+      <!-- Maison 18 -->
+    <div class="modal fade" id="maison18">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Maison avec vue</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison18" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Maison18_2.png"
+                    class="d-block w-100"
+                    alt="Salon"
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Maison18_3.png"
+                    class="d-block w-100"
+                    alt="Chambre"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison18"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison18"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Coteaux</p>
+            <p><strong>Surface :</strong> 100 m²</p>
+            <p><strong>Prix :</strong> 9 000 HTG / mois</p>
+            <p><strong>Contact :</strong> +509 0000 0000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- Maison 19 -->
+    <div class="modal fade" id="maison19">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Maison avec vue</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison19" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Maison19_2.png"
+                    class="d-block w-100"
+                    alt="Salon"
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Maison19_3.png"
+                    class="d-block w-100"
+                    alt="Chambre"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison19"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison19"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Les Anglais</p>
+            <p><strong>Surface :</strong> 110 m²</p>
+            <p><strong>Prix :</strong> 9 500 HTG / mois</p>
+            <p><strong>Contact :</strong> +509 0000 0000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- Maison 20-->
+    <div class="modal fade" id="maison20">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"> Maison avec vue</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison20" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Maison20_2.png"
+                    class="d-block w-100"
+                    alt="Salon"
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Maison20_3.png"
+                    class="d-block w-100"
+                    alt="Chambre"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison20"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison20"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Tiburon</p>
+            <p><strong>Surface :</strong> 150 m²</p>
+            <p><strong>Prix :</strong> 15 000 HTG / mois</p>
+            <p><strong>Contact :</strong> +509 0000 0000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- Maison 21 -->
+    <div class="modal fade" id="maison21">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Maison au bord de la mer</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison21" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Maison21_3.png"
+                    class="d-block w-100"
+                    alt="Salon"
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Maison21_4.png"
+                    class="d-block w-100"
+                    alt="Chambre"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison21"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison21"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Les Cayes</p>
+            <p><strong>Surface :</strong> 150 m²</p>
+            <p><strong>Prix :</strong> 30 000 HTG / mois</p>
+            <p><strong>Contact :</strong> +509 0000 0000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- Maison 22 -->
+    <div class="modal fade" id="maison22">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Villa</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison22" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Maison22_2.png"
+                    class="d-block w-100"
+                    alt="Salon"
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Maison23_3.png"
+                    class="d-block w-100"
+                    alt="Chambre"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison22"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison22"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Port-Salut</p>
+            <p><strong>Surface :</strong> 250 m²</p>
+            <p><strong>Prix :</strong> 100 000 HTG / mois</p>
+            <p><strong>Contact :</strong> +509 0000 0000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- Maison 23 -->
+    <div class="modal fade" id="maison23">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"> Appartement au bord de la mer</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison23" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Maison23_2.png"
+                    class="d-block w-100"
+                    alt="Salon"
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Maison23_3.png"
+                    class="d-block w-100"
+                    alt="Chambre"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison23"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison23"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Port-Salut</p>
+            <p><strong>Surface :</strong> 70 m²</p>
+            <p><strong>Prix :</strong> 6 000 HTG / mois</p>
+            <p><strong>Contact :</strong> +509 0000 0000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- Maison 24 -->
+    <div class="modal fade" id="maison24">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"> Maison Moderne</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison24" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Maison24_2.png"
+                    class="d-block w-100"
+                    alt="Salon"
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Maison24_3.png"
+                    class="d-block w-100"
+                    alt="Chambre"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison24"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison24"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Gelee</p>
+            <p><strong>Surface :</strong> 190 m²</p>
+            <p><strong>Prix :</strong> 60 000 HTG / mois</p>
+            <p><strong>Contact :</strong> +509 0000 0000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 
   
 
     <footer class="footer">
       <div class="footer-top">
-        <img src="IMG/logo-fond-blanc.svg" alt="LakAI" class="footer-logo" />
+        <a href="index.html">
+          <img src="IMG/logo-fond-blanc.svg" alt="LakAI" class="footer-logo" />
+        </a>
 
         <h2>Votre futur commence ici.</h2>
 
@@ -704,9 +1966,9 @@
 
         <a href="proprietes.html">Acheter</a>
 
-        <a href="proprietesalouer.html">Louer</a>
+        <a href="location.html" class="active">Louer</a>
 
-        <a href="estimation.html">Estimer</a>
+        <a href="estimations.html">Estimer</a>
 
         <a href="contact.html">Contact</a>
       </div>
@@ -719,7 +1981,7 @@
 
         <div class="contact-box">
           <img src="Webfonts/phone-solid.svg" alt="" />
-          <span>+509 0000-0000</span>
+          <span>+509 4797-5463</span>
         </div>
 
         <div class="contact-box">

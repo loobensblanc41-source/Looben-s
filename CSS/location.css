@@ -54,15 +54,20 @@ h3 {
   color: white;
   font-weight: 600;
   transition: 0.3s;
+   font-size: 1.250rem;
+   
 }
 
-.navbar nav a:hover {
+.navbar nav a:hover,
+.navbar nav a.active {
   color: #d4b896;
 }
 
 .navbar nav a:hover {
   color: #d4b896;
 }
+
+
 
 .navbar nav a:hover::after {
   width: 100%;
@@ -81,6 +86,8 @@ h3 {
   align-items: center;
   text-align: center;
   padding: 40px;
+  padding-top: 130px;
+  box-sizing: border-box;
 }
 
 .hero-overlay {
@@ -155,6 +162,7 @@ h3 {
   background: #ffffff;
   transform: translateY(-4px);
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+  color: #1c3410;
 }
 
 .btn2 {
@@ -321,7 +329,7 @@ h3 {
   color: #ffffff;
 }
 
-/* MODAL PROPRIÉTÉ */
+
 
 .modal-content {
   border-radius: 18px;
@@ -457,10 +465,6 @@ h3 {
 }
 
 
-/*==========================
-        MENU
-==========================*/
-
 .footer-middle{
     display:flex;
     justify-content:center;
@@ -481,9 +485,6 @@ h3 {
 }
 
 
-/*==========================
-      CONTACT
-==========================*/
 
 .footer-contact{
     display:flex;
@@ -507,9 +508,6 @@ h3 {
 }
 
 
-/*==========================
-      RESEAUX SOCIAUX
-==========================*/
 
 .footer-social{
     display:flex;
@@ -544,9 +542,6 @@ h3 {
 }
 
 
-/*==========================
-      COPYRIGHT
-==========================*/
 
 .footer-bottom{
     margin-top:20px;
@@ -574,6 +569,7 @@ h3 {
 
   .hero {
     padding: 20px;
+    padding-top: 180px;
   }
 
   .hero p {
@@ -592,5 +588,103 @@ h3 {
   .btn2 {
     width: 100%;
     text-align: center;
+  }
+}
+
+
+.filtre-input,
+.voir-plus-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+.filtres-rapides {
+  background: #f4e8d8;
+  padding: 40px 8% 10px;
+}
+
+.filtres-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.filtres-categories label {
+  cursor: pointer;
+}
+
+#cat-tous:checked ~ .filtres-rapides label[for="cat-tous"],
+#cat-piscine:checked ~ .filtres-rapides label[for="cat-piscine"],
+#cat-chambres:checked ~ .filtres-rapides label[for="cat-chambres"],
+#cat-jardin:checked ~ .filtres-rapides label[for="cat-jardin"],
+#cat-balcon:checked ~ .filtres-rapides label[for="cat-balcon"],
+#cat-vues:checked ~ .filtres-rapides label[for="cat-vues"],
+#cat-mer:checked ~ .filtres-rapides label[for="cat-mer"] {
+  background: #2d5016;
+  color: #ffffff;
+}
+
+
+#cat-piscine:checked ~ #liste-locations .property-card:not(.cat-piscine) { display: none; }
+#cat-chambres:checked ~ #liste-locations .property-card:not(.cat-chambres) { display: none; }
+#cat-jardin:checked ~ #liste-locations .property-card:not(.cat-jardin) { display: none; }
+#cat-balcon:checked ~ #liste-locations .property-card:not(.cat-balcon) { display: none; }
+#cat-vues:checked ~ #liste-locations .property-card:not(.cat-vues) { display: none; }
+#cat-mer:checked ~ #liste-locations .property-card:not(.cat-mer) { display: none; }
+
+.property-card.extra {
+  display: none;
+}
+
+.voir-plus-checkbox:checked ~ .property-grid .property-card.extra {
+  display: block;
+}
+
+.voir-plus-zone {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-voir-plus {
+  display: inline-block;
+  background: #2d5016;
+  color: #ffffff;
+  padding: 13px 34px;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-voir-plus:hover {
+  background: #1c3410;
+  transform: translateY(-2px);
+}
+
+.btn-voir-plus .txt-moins {
+  display: none;
+}
+
+.voir-plus-checkbox:checked ~ .voir-plus-zone .btn-voir-plus .txt-plus {
+  display: none;
+}
+
+.voir-plus-checkbox:checked ~ .voir-plus-zone .btn-voir-plus .txt-moins {
+  display: inline;
+}
+
+@media (max-width: 768px) {
+  .filtres-rapides {
+    padding: 30px 6% 10px;
+  }
+
+  .filtres-categories {
+    gap: 10px;
   }
 }

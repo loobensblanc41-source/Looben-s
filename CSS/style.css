@@ -16,6 +16,7 @@ body {
     url("../IMG/Gemini_Generated_Image_sgoa5hsgoa5hsgoa.png");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,19 +68,16 @@ body {
   color: white;
   font-weight: 600;
   transition: 0.3s;
+  font-size: 1.250rem;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+  color: #d4b896;
 }
 
 .navbar nav a:hover {
   color: #d4b896;
-}
-
-.hero {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 40px;
 }
 
 .hero-content {
@@ -90,14 +88,14 @@ body {
   display: block;
   color: #d4b896;
   letter-spacing: 5px;
-  font-size: 0.95rem;
+  font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
 .hero h1 {
   color: white;
-  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-size: clamp(3.5rem, 7vw, 5.5rem);
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 20px;
@@ -106,7 +104,7 @@ body {
 
 .hero p {
   color: rgba(255, 255, 255, 0.9);
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   line-height: 1.8;
   margin-bottom: 40px;
 }
@@ -130,7 +128,25 @@ body {
 
 .btn1:hover {
   transform: translateY(-3px);
-  background: #3b6720;
+  background: white;
+  color: #2d5016;
+}
+
+.btn11 {
+  background: #2d5016;
+  color: white;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn11:hover {
+  transform: translateY(-3px);
+  background: white;
+  color: #2d5016;
+  border: 2px solid #2D5016;
 }
 
 .btn2 {
@@ -138,29 +154,17 @@ body {
   text-decoration: none;
   padding: 15px 30px;
   border-radius: 50px;
-  border: 2px solid #d4b896;
+  border: 2px solid rgba(255, 255, 255, 0.6);;
   font-weight: bold;
   transition: 0.3s;
 }
 
 .btn2:hover {
-  background: #d4b896;
+  background: #ffffff;
   color: #2d5016;
 }
 
-/* premye footer
-footer {
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(6px);
-  border-top: 1px solid rgba(212, 184, 150, 0.2);
-  color: rgba(255, 255, 255, 0.65);
-  text-align: center;
-  padding: 20px;
-  font-size: 13px;
-}
 
-*/
 
 .svc-section {
   background: #f4e8d8;
@@ -337,9 +341,7 @@ footer {
 
 
 
-/*==========================
-        FOOTER
-==========================*/
+
 
 .footer{
     background:#FFFFFF;
@@ -371,9 +373,6 @@ footer {
 }
 
 
-/*==========================
-        MENU
-==========================*/
 
 .footer-middle{
     display:flex;
@@ -395,9 +394,6 @@ footer {
 }
 
 
-/*==========================
-      CONTACT
-==========================*/
 
 .footer-contact{
     display:flex;
@@ -421,9 +417,6 @@ footer {
 }
 
 
-/*==========================
-      RESEAUX SOCIAUX
-==========================*/
 
 .footer-social{
     display:flex;
@@ -458,9 +451,6 @@ footer {
 }
 
 
-/*==========================
-      COPYRIGHT
-==========================*/
 
 .footer-bottom{
     margin-top:20px;
@@ -509,7 +499,6 @@ footer {
   }
 }
 
-/*TEMOIGNAGES*/
 
 .testimonial-section {
   padding: 100px 8%;
@@ -577,7 +566,7 @@ footer {
   font-size: 14px;
 }
 
-/* Boutons Bootstrap */
+
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -588,7 +577,6 @@ footer {
   padding: 18px;
 }
 
-/* Indicateurs */
 
 .carousel-indicators button {
   background-color: #2d5016;
@@ -597,8 +585,6 @@ footer {
 .carousel {
   padding-bottom: 60px;
 }
-
-/*news-letter*/
 
 .newsletter {
   display: flex;
@@ -697,6 +683,9 @@ footer {
   width: 100%;
 }
 
+@media (max-width: 600px)
+ { .img-newsletter { display: none; } }
+
 @media (max-width: 992px) {
   .testimonial-card {
     width: 280px;
@@ -711,5 +700,5 @@ footer {
 }
 
 .carousel-item {
-  min-height: 430px;
+  min-height: auto;
 }
