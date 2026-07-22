@@ -1,155 +1,200 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
-    <link rel="icon" href="webfonts/phone.svg">
-    <link rel="stylesheet" href="CSS/contact.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body>
-
+    <link rel="icon" href="webfonts/phone.svg" />
+    <link rel="stylesheet" href="CSS/contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
     <header class="navbar">
-        <div class="logo">
-         <a href="index.html" target="_blank"><img src="IMG/logo-navbar.svg" alt="Lakay AI" height="70px"></a>
-   
-        </div>
-    <nav>
+      <div class="logo">
+        <a href="index.html" target="_blank"
+          ><img src="IMG/logo-navbar.svg" alt="Lakay AI" height="70px"
+        /></a>
+      </div>
+      <nav>
         <a href="index.html">Accueil</a>
         <a href="apropos.html">À propos</a>
         <a href="location.html">Location</a>
         <a href="proprietes.html">Vente</a>
         <a href="estimations.html">Estimation</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
-</header>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </header>
 
-<main>
-
-    <div class="box11">
+    <main>
+      <div class="box11">
         <h1>Contactez-nous</h1>
-    </div>
+      </div>
 
-    <section class="contact-grid">
+      <section class="contact-grid">
+        <div class="coordonnees">
+          <h2>Nos coordonnées</h2>
 
-    <div class="coordonnees">
-        <h2>Nos coordonnées</h2>
-
-        <div class="coord-item">
+          <div class="coord-item">
             <i class="fa-solid fa-location-dot"></i>
             <div>
-                <h4>Adresse</h4>
-                <p>Les Cayes, Haïti</p>
+              <h4>Adresse</h4>
+              <p>Les Cayes, Haïti</p>
             </div>
-        </div>
+          </div>
 
-        <div class="coord-item">
+          <div class="coord-item">
             <i class="fa-solid fa-phone"></i>
             <div>
-                <h4>Téléphone</h4>
-                <p>+509 0000-0000</p>
+              <h4>Téléphone</h4>
+              <p>+509 0000-0000</p>
             </div>
-        </div>
+          </div>
 
-        <div class="coord-item">
+          <div class="coord-item">
             <i class="fa-solid fa-envelope"></i>
             <div>
-                <h4>Email</h4>
-                <p>contact@lakai.ht</p>
+              <h4>Email</h4>
+              <p>contact@lakai.ht</p>
             </div>
-        </div>
+          </div>
 
-        <div class="coord-item">
+          <div class="coord-item">
             <i class="fa-solid fa-clock"></i>
             <div>
-                <h4>Horaires</h4>
-                <p>Lundi - Vendredi<br>8h00 - 17h00</p>
+              <h4>Horaires</h4>
+              <p>Lundi - Vendredi<br />8h00 - 17h00</p>
             </div>
-        </div>
+          </div>
 
-        <div class="coord-social">
+          <div class="coord-social">
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </div>
         </div>
-    </div>
 
-<div class="formu">
-    <form action="">
-       <div class="lab">
-            <div class="label-icon">
-             <img src="Webfonts/user-alt.svg" alt="user" width="20" height="20">
-             <label for="nom">Nom</label>
+        <div class="formu">
+          <form action="">
+            <div class="lab">
+              <div class="label-icon">
+                <img
+                  src="Webfonts/user-alt.svg"
+                  alt="user"
+                  width="20"
+                  height="20"
+                />
+                <label for="nom">Nom</label>
+              </div>
+              <input
+                type="text"
+                id="nom"
+                name="nom"
+                placeholder="Louis"
+                required
+              />
             </div>
-            <input type="text" id="nom" name="nom" placeholder="Louis" required>
-        </div>
 
-        <div class="lab">
-            <div class="label-icon">
-            <img src="Webfonts/user-alt.svg" alt="user" width="20" height="20">
-             <label for="prenom">Prénom</label>
+            <div class="lab">
+              <div class="label-icon">
+                <img
+                  src="Webfonts/user-alt.svg"
+                  alt="user"
+                  width="20"
+                  height="20"
+                />
+                <label for="prenom">Prénom</label>
+              </div>
+              <input
+                type="text"
+                id="prenom"
+                name="prenom"
+                placeholder="Julien"
+                required
+              />
             </div>
-            <input type="text" id="prenom" name="prenom" placeholder="Julien" required>
+
+            <div class="lab">
+              <div class="label-icon">
+                <img
+                  src="Webfonts/envelope.svg"
+                  alt="email"
+                  width="20"
+                  height="20"
+                />
+                <label for="email">Email</label>
+              </div>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="julienlouis01@gmail.com"
+                required
+              />
+            </div>
+
+            <div class="lab">
+              <div class="label-icon">
+                <img
+                  src="Webfonts/tag.svg"
+                  alt="sujet"
+                  width="20"
+                  height="20"
+                />
+                <label for="sujet">Objet</label>
+              </div>
+              <select name="sujet" id="sujet">
+                <option value="" disabled selected>
+                  Veuillez choisir un sujet
+                </option>
+                <option value="assistance">Assistance technique</option>
+                <option value="paiement">Problème de paiement</option>
+                <option value="information">Demande d'information</option>
+                <option value="service">Question sur un service</option>
+                <option value="partenariat">Partenariat</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+
+            <div class="lab">
+              <div class="label-icon">
+                <img
+                  src="Webfonts/comment.svg"
+                  alt="message"
+                  width="20"
+                  height="20"
+                />
+                <label for="text">Message</label>
+              </div>
+              <textarea
+                name="text"
+                id="text"
+                placeholder="Je vous contacte ..."
+              ></textarea>
+            </div>
+            <button type="submit">Envoyer</button>
+          </form>
         </div>
+      </section>
+    </main>
 
-<div class="lab">
-    <div class="label-icon">
-        <img src="Webfonts/envelope.svg" alt="email" width="20" height="20">
-        <label for="email">Email</label>
-    </div>
-    <input type="email" id="email" name="email" placeholder="julienlouis01@gmail.com" required>
-</div>
-
-<div class="lab">
-    <div class="label-icon">
-        <img src="Webfonts/tag.svg" alt="sujet" width="20" height="20">
-        <label for="sujet">Objet</label>
-    </div>
-    <select name="sujet" id="sujet">
-        <option value=""  disabled selected>Veuillez choisir un sujet</option>
-        <option value="assistance">Assistance technique</option>
-        <option value="paiement">Problème de paiement</option>
-        <option value="information">Demande d'information</option>
-        <option value="service">Question sur un service</option>
-        <option value="partenariat">Partenariat</option>
-        <option value="autre">Autre</option>
-    </select>
-</div>
-
-<div class="lab">
-    <div class="label-icon">
-        <img src="Webfonts/comment.svg" alt="message" width="20" height="20">
-        <label for="text">Message</label>
-    </div>
-    <textarea name="text" id="text" placeholder="Je vous contacte ..."></textarea>
-</div>
-    <button type="submit">Envoyer</button>
-    </form>
-</div>
-</section>
-</main>
-
-
-       <footer class="footer">
-
-    <div class="footer-top">
-         <a href="index.html">
-<img src="IMG/logo-fond-blanc.svg" alt="LakAI" class="footer-logo">
-         </a>
-        
+    <footer class="footer">
+      <div class="footer-top">
+        <a href="index.html">
+          <img src="IMG/logo-fond-blanc.svg" alt="LakAI" class="footer-logo" />
+        </a>
 
         <h2>Votre futur commence ici.</h2>
 
         <p>
-            LakAI vous accompagne dans tous vos projets immobiliers
-            aux Cayes et partout en Haïti.
+          LakAI vous accompagne dans tous vos projets immobiliers aux Cayes et
+          partout en Haïti.
         </p>
+      </div>
 
-    </div>
-
-    <div class="footer-middle">
-
+      <div class="footer-middle">
         <a href="index.html">Accueil</a>
 
         <a href="apropos.html">À propos</a>
@@ -161,46 +206,36 @@
         <a href="estimations.html">Estimer</a>
 
         <a href="contact.html">Contact</a>
+      </div>
 
-    </div>
-
-    <div class="footer-contact">
-
+      <div class="footer-contact">
         <div class="contact-box">
-            <img src="Webfonts/location-dot-solid.svg" alt="">
-            <span>Les Cayes, Haïti</span>
+          <img src="Webfonts/location-dot-solid.svg" alt="" />
+          <span>Les Cayes, Haïti</span>
         </div>
 
         <div class="contact-box">
-            <img src="Webfonts/phone-solid.svg" alt="">
-            <span>+509 0000-0000</span>
+          <img src="Webfonts/phone-solid.svg" alt="" />
+          <span>+509 0000-0000</span>
         </div>
 
         <div class="contact-box">
-            <img src="Webfonts/envelope-solid.svg" alt="">
-            <span>contact@lakai.ht</span>
+          <img src="Webfonts/envelope-solid.svg" alt="" />
+          <span>contact@lakai.ht</span>
         </div>
+      </div>
 
-    </div>
+      <div class="footer-social">
+        <a href="#"><img src="Webfonts/facebook.svg" alt="" /></a>
 
-    <div class="footer-social">
+        <a href="#"><img src="Webfonts/instagram.svg" alt="" /></a>
 
-        <a href="#"><img src="Webfonts/facebook.svg" alt=""></a>
+        <a href="#"><img src="Webfonts/twitter.svg" alt="" /></a>
+      </div>
 
-        <a href="#"><img src="Webfonts/instagram.svg" alt=""></a>
-
-        <a href="#"><img src="Webfonts/twitter.svg" alt=""></a>
-
-    </div>
-
-    <div class="footer-bottom">
-
-        <p>
-            © 2026 LakAI Agence Immobilière • Tous droits réservés
-        </p>
-
-    </div>
-
-</footer>
-</body>
+      <div class="footer-bottom">
+        <p>© 2026 LakAI Agence Immobilière • Tous droits réservés</p>
+      </div>
+    </footer>
+  </body>
 </html>
