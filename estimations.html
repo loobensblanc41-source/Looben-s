@@ -1,3 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estimation Immobiliere</title>
+    <link rel="icon" href="webfonts/dollar.svg" />
+    <link rel="stylesheet" href="CSS/estimation.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="IMG/logo-navbar.svg" alt="LakAI" height="70" />
+        </a>
+      </div>
+
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="apropos.html">À propos</a>
+        <a href="location.html">Location</a>
+        <a href="proprietes.html">Vente</a>
+        <a href="estimations.html" class="active">Estimation</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <div class="hero-content">
+        <span class="hero-subtitle">Estimation immobilière</span>
+
+        <h1>Estimez votre bien <em>gratuitement</em></h1>
+
+        <p>
+          Obtenez une estimation fiable et gratuite de votre maison, appartement
+          ou terrain en quelques minutes.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#form-estimation" class="btn1">Demander une estimation</a>
+
+          <a href="contact.html" class="btn2">Nous contacter</a>
+        </div>
+      </div>
+    </main>
+
+    <section class="estimation-hero" id="form-estimation">
+      <div class="left">
+        <h4 class="ekri">Estimation Immobilière</h4>
+        <h1>Pourquoi passer par LakAI ?</h1>
+        <p>Obtenez une estimation fiable et gratuite en quelques minutes.</p>
+
+        <div class="item">
+          <i class="fa-solid fa-circle-check"></i>
+          <span>Service 100% gratuit</span>
+        </div>
+        <div class="item">
+          <i class="fa-solid fa-stopwatch"></i>
+          <span>Réponse sous 24 heures</span>
+        </div>
+        <div class="item">
+          <i class="fa-solid fa-handshake"></i>
+          <span>Sans engagement</span>
+        </div>
+        <div class="item">
+          <i class="fa-solid fa-lock"></i>
+          <span>Données confidentielles</span>
+        </div>
+      </div>
+
+      <div class="right">
+        <h2>Demande d'estimation</h2>
+
+        <p>
+          Obtenez une estimation rapide de votre maison, appartement ou terrain.
+        </p>
+
+        <form>
+          <div class="row">
+            <div class="input-box">
+              <label>Nom</label>
+              <input type="text" placeholder="Nom" />
+            </div>
+            <div class="input-box">
+              <label>Prénom</label>
+              <input type="text" placeholder="Prénom" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-box">
+              <label>Email</label>
+              <input type="email" placeholder="Adresse e-mail" />
+            </div>
+            <div class="input-box">
+              <label>Téléphone</label>
+              <input type="tel" placeholder="Téléphone" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-box">
+              <label>Type de bien</label>
+              <select>
+                <option>Maison</option>
+                <option>Appartement</option>
+                <option>Terrain</option>
+                <option>Building</option>
+              </select>
+            </div>
+            <div class="input-box">
+              <label>Commune</label>
+              <input type="text" placeholder="Ville / Commune" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-box">
+              <label>Adresse complète</label>
+              <input type="text" placeholder="Adresse complète" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-box">
+              <label>Surface</label>
+              <input type="number" placeholder="Surface (m²)" />
+            </div>
+            <div class="input-box">
+              <label>Chambres</label>
+              <input type="number" placeholder="Nombre de chambres" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-box">
+              <label>Salles de bain</label>
+              <input type="number" placeholder="Nombre de salles de bain" />
+            </div>
+            <div class="input-box">
+              <label>Année de construction</label>
+              <input type="number" placeholder="Ex : 2015" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-box">
+              <label>État du bien</label>
+              <select>
+                <option>Neuf</option>
+                <option>Bon état</option>
+                <option>À rénover</option>
+              </select>
+            </div>
+            <div class="input-box">
+              <label>Budget estimé souhaité</label>
+              <select>
+                <option>Moins de 5 M HTG</option>
+                <option>5 à 10 M HTG</option>
+                <option>10 à 20 M HTG</option>
+                <option>Plus de 20 M HTG</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-box">
+              <label>Description</label>
+              <textarea rows="5" placeholder="Décrivez votre bien"></textarea>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-box">
+              <label>Photo du bien (facultatif)</label>
+              <input type="file" class="fichier" accept="image/*" />
+            </div>
+          </div>
+
+          <button>Demander une estimation →</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="pourquoi-nous">
+      <div class="section-titre">
+        <h2>Pourquoi choisir LakAI ?</h2>
+        <p>Une équipe locale, fiable et disponible pour vous accompagner.</p>
+      </div>
+      <div class="pourquoi-grid">
+        <div class="pourquoi-carte">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <h3>Expertise locale</h3>
+          <p>
+            Une parfaite connaissance du marché immobilier aux Cayes et
+            environs.
+          </p>
+        </div>
+        <div class="pourquoi-carte">
+          <i class="fa-solid fa-user-tie"></i>
+          <h3>Agents certifiés</h3>
+          <p>
+            Des professionnels expérimentés qui vous accompagnent à chaque
+            étape.
+          </p>
+        </div>
+        <div class="pourquoi-carte">
+          <i class="fa-solid fa-sack-dollar"></i>
+          <h3>Estimation gratuite</h3>
+          <p>Aucun frais caché, une estimation offerte sans engagement.</p>
+        </div>
+        <div class="pourquoi-carte">
+          <i class="fa-solid fa-bolt"></i>
+          <h3>Réponse rapide</h3>
+          <p>Un retour sous 24 heures pour avancer sans attendre.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="etapes">
+      <div class="section-titre">
+        <h2>Comment ça marche ?</h2>
+        <p>Un processus simple en 4 étapes.</p>
+      </div>
+      <div class="etapes-grid">
+        <div class="etape">
+          <div class="etape-num">1</div>
+          <h3>Vous remplissez le formulaire</h3>
+          <p>Renseignez les informations sur votre bien en quelques minutes.</p>
+        </div>
+        <div class="etape">
+          <div class="etape-num">2</div>
+          <h3>Nous analysons votre bien</h3>
+          <p>
+            Notre équipe étudie le marché et les caractéristiques de votre bien.
+          </p>
+        </div>
+        <div class="etape">
+          <div class="etape-num">3</div>
+          <h3>Vous recevez une estimation</h3>
+          <p>Une estimation fiable vous est envoyée sous 24 heures.</p>
+        </div>
+        <div class="etape">
+          <div class="etape-num">4</div>
+          <h3>Un conseiller vous contacte</h3>
+          <p>Un agent LakAI vous accompagne pour la suite de votre projet.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-estimation">
+      <div class="section-titre">
+        <h2>Questions fréquentes</h2>
+      </div>
+      <div class="faq-liste">
+        <details>
+          <summary>Comment est calculée l'estimation ?</summary>
+          <p>
+            Nous analysons la localisation, la surface, l'état du bien et les
+            prix du marché local pour vous proposer une estimation fiable.
+          </p>
+        </details>
+        <details>
+          <summary>Combien coûte le service ?</summary>
+          <p>
+            L'estimation est entièrement gratuite et sans aucun engagement de
+            votre part.
+          </p>
+        </details>
+        <details>
+          <summary>En combien de temps je reçois une réponse ?</summary>
+          <p>
+            Notre équipe vous répond généralement en moins de 24 heures après
+            votre demande.
+          </p>
+        </details>
+        <details>
+          <summary>Puis-je vendre mon bien après l'estimation ?</summary>
+          <p>
+            Oui, si vous le souhaitez, un agent LakAI peut vous accompagner pour
+            la mise en vente de votre bien.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <a href="index.html">
+          <img src="IMG/logo-fond-blanc.svg" alt="LakAI" class="footer-logo" />
+        </a>
+
+        <h2>Votre futur commence ici.</h2>
+
+        <p>
+          LakAI vous accompagne dans tous vos projets immobiliers aux Cayes et
+          partout en Haïti.
+        </p>
+      </div>
+
+      <div class="footer-middle">
+        <a href="index.html">Accueil</a>
+
+        <a href="apropos.html">À propos</a>
+
+        <a href="proprietes.html">Acheter</a>
+
+        <a href="location.html">Louer</a>
+
+        <a href="estimations.html">Estimer</a>
+
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-contact">
+        <div class="contact-box">
+          <img src="Webfonts/location-dot-solid.svg" alt="" />
+          <span>Les Cayes, Haïti</span>
+        </div>
+
+        <div class="contact-box">
+          <img src="Webfonts/phone-solid.svg" alt="" />
+          <span>+509 1234-5678</span>
+        </div>
+
+        <div class="contact-box">
+          <img src="Webfonts/envelope-solid.svg" alt="" />
+          <span>contact@lakai.ht</span>
+        </div>
+      </div>
+
+      <div class="footer-social">
+        <a href="#"><img src="Webfonts/facebook.svg" alt="" /></a>
+
+        <a href="#"><img src="Webfonts/instagram.svg" alt="" /></a>
+
+        <a href="#"><img src="Webfonts/twitter.svg" alt="" /></a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 LakAI Agence Immobilière • Tous droits réservés</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
 <!DOCTYPE html>
 <html lang="en">
 

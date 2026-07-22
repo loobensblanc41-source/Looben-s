@@ -1,0 +1,1730 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LakAI - Propriétés à Vendre</title>
+
+    <link rel="icon" href="webfonts/house.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/proprietes.css" />
+  </head>
+
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <header class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="IMG/logo-navbar.svg" alt="LakAI" height="70" />
+        </a>
+      </div>
+
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="apropos.html">À propos</a>
+        <a href="location.html">Location</a>
+        <a href="proprietes.html" class="active">Vente</a>
+        <a href="estimations.html">Estimation</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <div class="hero-content">
+        <span class="hero-subtitle"> PROPRIÉTÉS À VENDRE </span>
+
+        <h1>Trouvez la propriété de vos rêves</h1>
+
+        <p>
+          Découvrez notre sélection de maisons, appartements et villas
+          disponibles aux Cayes et dans les communes avoisinantes.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="proprietes.html" class="btn11"> Voir les propriétés </a>
+
+          <a href="contact.html" class="btn2"> Nous contacter </a>
+        </div>
+      </div>
+    </main>
+
+    <section class="filtre-recherche">
+      <form class="filtre-form">
+        <div class="filtre-champ">
+          <label for="filtre-ville">Ville</label>
+          <select id="filtre-ville" name="ville">
+            <option value="">Toutes les villes</option>
+            <option value="les-cayes">Les Cayes</option>
+            <option value="bergeaud">Bergeaud</option>
+            <option value="torbeck">Torbeck</option>
+            <option value="port-salut">Port-Salut</option>
+            <option value="camp-perrin">Camp-Perrin</option>
+            <option value="aquin">Aquin</option>
+          </select>
+        </div>
+
+        <div class="filtre-champ">
+          <label for="filtre-type">Type de bien</label>
+          <select id="filtre-type" name="type">
+            <option value="">Tous les types</option>
+            <option value="maison">Maison</option>
+            <option value="appartement">Appartement</option>
+            <option value="villa">Villa</option>
+          </select>
+        </div>
+
+        <div class="filtre-champ">
+          <label for="filtre-chambres">Chambres</label>
+          <select id="filtre-chambres" name="chambres">
+            <option value="">Indifférent</option>
+            <option value="1">1</option>
+            <option value="2">2+</option>
+            <option value="3">3+</option>
+            <option value="4">4+</option>
+          </select>
+        </div>
+
+        <div class="filtre-champ">
+          <label for="filtre-prix">Prix max (HTG)</label>
+          <input
+            type="number"
+            id="filtre-prix"
+            name="prix-max"
+            placeholder="Ex: 50000"
+            min="0"
+            step="1000"
+          />
+        </div>
+
+        <div class="filtre-champ">
+          <label for="filtre-superficie">Superficie min (m²)</label>
+          <input
+            type="number"
+            id="filtre-superficie"
+            name="superficie-min"
+            placeholder="Ex: 100"
+            min="0"
+            step="10"
+          />
+        </div>
+
+        <button type="submit" class="btn-filtre">Filtrer</button>
+      </form>
+    </section>
+
+    
+    <input
+      type="radio"
+      name="filtre-categorie"
+      id="cat-tous"
+      class="filtre-input"
+      checked
+    />
+    <input
+      type="radio"
+      name="filtre-categorie"
+      id="cat-balcon"
+      class="filtre-input"
+    />
+    <input
+      type="radio"
+      name="filtre-categorie"
+      id="cat-chambres"
+      class="filtre-input"
+    />
+    <input
+      type="radio"
+      name="filtre-categorie"
+      id="cat-piscine"
+      class="filtre-input"
+    />
+    <input
+      type="radio"
+      name="filtre-categorie"
+      id="cat-building"
+      class="filtre-input"
+    />
+    <input
+      type="radio"
+      name="filtre-categorie"
+      id="cat-terrain"
+      class="filtre-input"
+    />
+
+    <section class="filtres-rapides">
+      <div class="filtres-categories">
+        <label for="cat-tous" class="btn-filtre">Tous</label>
+        <label for="cat-balcon" class="btn-filtre">Avec balcon</label>
+        <label for="cat-chambres" class="btn-filtre">2 chambres et +</label>
+        <label for="cat-piscine" class="btn-filtre">Avec piscine</label>
+        <label for="cat-building" class="btn-filtre">Building</label>
+        <label for="cat-terrain" class="btn-filtre">Terrain</label>
+      </div>
+    </section>
+
+    <section class="property-preview" id="liste-proprietes">
+      <div class="section-header">
+        <h2>Nos propriétés à vendre</h2>
+        <p>Utilisez les filtres ci-dessus pour affiner votre recherche.</p>
+      </div>
+
+      <input type="checkbox" id="voir-plus" class="voir-plus-checkbox" />
+
+      <div class="property-grid">
+        <!-- Article 1 - Balcon -->
+        <article class="property-card cat-balcon">
+          <img src="IMG/Maison-avec-balcon.webp" alt="Villa avec balcon" />
+          <div class="property-content">
+            <h3>Villa avec balcon</h3>
+            <p class="property-info">Les Cayes</p>
+            <p class="property-info">180 m²</p>
+            <p class="property-price">25 000 000 HTG</p>
+            <button
+              class="btn btn-primary mt-2"
+              data-bs-toggle="modal"
+              data-bs-target="#maison1"
+            >
+              Voir détails
+            </button>
+          </div>
+        </article>
+
+        <!-- Article 2 - Balcon -->
+        <article class="property-card cat-balcon">
+          <img src="IMG/Propriété-à-vendre-1.webp" alt="Appartement moderne" />
+          <div class="property-content">
+            <h3>Appartement moderne</h3>
+            <p class="property-info">Camp-Perrin</p>
+            <p class="property-info">210 m²</p>
+            <p class="property-price">30 000 000 HTG</p>
+            <button
+              class="btn btn-primary mt-2"
+              data-bs-toggle="modal"
+              data-bs-target="#maison2"
+            >
+              Voir détails
+            </button>
+          </div>
+        </article>
+
+        <!-- Article 3 - Balcon (extra : revele par "Voir plus") -->
+        <article class="property-card cat-balcon extra">
+          <img src="IMG/Propriete-a-vendre-2.webp" alt="Appartement moderne" />
+          <div class="property-content">
+            <h3>Appartement moderne</h3>
+            <p class="property-info">Bergeaud</p>
+            <p class="property-info">220 m²</p>
+            <p class="property-price">35 000 000 HTG</p>
+            <button
+              class="btn btn-primary mt-2"
+              data-bs-toggle="modal"
+              data-bs-target="#maison3"
+            >
+              Voir détails
+            </button>
+          </div>
+        </article>
+
+        <!-- Article 4 - 2 chambres et + -->
+        <article class="property-card cat-chambres">
+          <img src="IMG/PV-2-chambres.webp" alt="Maison 4 chambres" />
+          <div class="property-content">
+            <h3>Maison 4 chambres</h3>
+            <p class="property-info">Torbeck</p>
+            <p class="property-info">160 m²</p>
+            <p class="property-price">1 000 000 HTG</p>
+            <button
+              class="btn btn-primary mt-2"
+              data-bs-toggle="modal"
+              data-bs-target="#maison4"
+            >
+              Voir détails
+            </button>
+          </div>
+        </article>
+
+        <!-- Article 5 - 2 chambres et + -->
+        <article class="property-card cat-chambres">
+          <img
+            src="IMG/PV-Maison-2-chambre-ou.webp"
+            alt="Maison 3 chambres"
+          />
+          <div class="property-content">
+            <h3>Maison 3 chambres</h3>
+            <p class="property-info">Torbeck</p>
+            <p class="property-info">100 m²</p>
+            <p class="property-price">750 000 HTG</p>
+            <button
+              class="btn btn-primary mt-2"
+              data-bs-toggle="modal"
+              data-bs-target="#maison5"
+            >
+              Voir détails
+            </button>
+          </div>
+        </article>
+
+        <!-- Article 6 - Piscine -->
+        <article class="property-card cat-piscine">
+          <img src="IMG/M-Piscine.webp" alt="Appartement avec piscine" />
+          <div class="property-content">
+            <h3>Appartement moderne avec piscine</h3>
+            <p class="property-info">Les Cayes</p>
+            <p class="property-info">280 m²</p>
+            <p class="property-price">80 000 000 HTG</p>
+            <button
+              class="btn btn-primary mt-2"
+              data-bs-toggle="modal"
+              data-bs-target="#maison6"
+            >
+              Voir détails
+            </button>
+          </div>
+        </article>
+
+        <!-- Article 7 - Piscine (extra : revele par "Voir plus") -->
+        <article class="property-card cat-piscine extra">
+          <img src="IMG/Villa with pool.webp" alt="Appartement moderne" />
+          <div class="property-content">
+            <h3>Appartement moderne</h3>
+            <p class="property-info">Bergeaud</p>
+            <p class="property-info">270 m²</p>
+            <p class="property-price">75 000 000 HTG</p>
+            <button
+              class="btn btn-primary mt-2"
+              data-bs-toggle="modal"
+              data-bs-target="#maison8"
+            >
+              Voir détails
+            </button>
+          </div>
+        </article>
+
+        <!-- Article 8 - Building -->
+        <article class="property-card cat-building">
+          <img src="IMG/BG.webp" alt="Building 12 etages" />
+          <div class="property-content">
+            <h3>Building 12 etages</h3>
+            <p class="property-info">Aquin</p>
+            <p class="property-info">860 m²</p>
+            <p class="property-price">420 000 000 HTG</p>
+            <button
+              class="btn btn-primary mt-2"
+              data-bs-toggle="modal"
+              data-bs-target="#maison9"
+            >
+              Voir détails
+            </button>
+          </div>
+        </article>
+
+        <!-- Article 9 - Building -->
+        <article class="property-card cat-building">
+          <img src="IMG/BG+.webp" alt="Commercial Building" />
+          <div class="property-content">
+            <h3>Commercial Building</h3>
+            <p class="property-info">Les Cayes</p>
+            <p class="property-info">920 m²</p>
+            <p class="property-price">550 000 000 HTG</p>
+            <button
+              class="btn btn-primary mt-2"
+              data-bs-toggle="modal"
+              data-bs-target="#maison10"
+            >
+              Voir détails
+            </button>
+          </div>
+        </article>
+
+        <!-- Article 10 - Building (extra : revele par "Voir plus") -->
+        <article class="property-card cat-building extra">
+          <img src="IMG/BG3.webp" alt="Residential Building" />
+          <div class="property-content">
+            <h3>Residential Building</h3>
+            <p class="property-info">Port-Salut</p>
+            <p class="property-info">620 m²</p>
+            <p class="property-price">355 000 000 HTG</p>
+            <button
+              class="btn btn-primary mt-2"
+              data-bs-toggle="modal"
+              data-bs-target="#maison11"
+            >
+              Voir détails
+            </button>
+          </div>
+        </article>
+
+        <!-- Article 11 - Building (extra : revele par "Voir plus") -->
+        <article class="property-card cat-building extra">
+          <img src="IMG/BG2.webp" alt="Industrial Building" />
+          <div class="property-content">
+            <h3>Industrial Building</h3>
+            <p class="property-info">Torbeck</p>
+            <p class="property-info">520 m²</p>
+            <p class="property-price">255 000 000 HTG</p>
+            <button
+              class="btn btn-primary mt-2"
+              data-bs-toggle="modal"
+              data-bs-target="#maison12"
+            >
+              Voir détails
+            </button>
+          </div>
+        </article>
+
+        <!-- Article 12 - Terrain -->
+        <article class="property-card cat-terrain">
+          <img
+            src="IMG/Gemini_Generated_Image_db5adgdb5adgdb5a.webp"
+            alt="1 Hectar de Terrain"
+          />
+          <div class="property-content">
+            <h3>1 Hectar de Terrain</h3>
+            <p class="property-info">Les Cayes</p>
+            <p class="property-info">10 000 m²</p>
+            <p class="property-price">100 000 000 HTG</p>
+            <button
+              class="btn btn-primary mt-2"
+              data-bs-toggle="modal"
+              data-bs-target="#maison13"
+            >
+              Voir détails
+            </button>
+          </div>
+        </article>
+
+        <!-- Article 13 - Terrain (extra : revele par "Voir plus") -->
+        <article class="property-card cat-terrain extra">
+          <img
+            src="IMG/caro.webp"
+            alt="1 Carreau de Terre"
+          />
+          <div class="property-content">
+            <h3>1 Carreau de Terre</h3>
+            <p class="property-info">Port-Salut</p>
+            <p class="property-info">12 900 m²</p>
+            <p class="property-price">145 000 000 HTG</p>
+            <button
+              class="btn btn-primary mt-2"
+              data-bs-toggle="modal"
+              data-bs-target="#maison14"
+            >
+              Voir détails
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <div class="voir-plus-zone">
+        <label for="voir-plus" class="btn-voir-plus">
+          <span class="txt-plus">Voir plus de maisons</span>
+          <span class="txt-moins">Voir moins</span>
+        </label>
+      </div>
+    </section>
+
+    <!--Modifye pou chak article-->
+
+    <!-- Maison 1 -->
+    <div class="modal fade" id="maison1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Villa avec balcon</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison1" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Gemini_Generated_Image_ewk20cewk20cewk2.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_j5dz5bj5dz5bj5dz.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_3xpy0q3xpy0q3xpy.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_538pvd538pvd538p.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_3xpy0q3xpy0q3xpy.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_hty7nkhty7nkhty7.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison1"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison1"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Les Cayes</p>
+            <p><strong>Surface :</strong> 180 m²</p>
+            <p><strong>Prix :</strong> 25 000 000 HTG</p>
+            <p><strong>Contact :</strong> +509 3220 6962</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Maison 2 -->
+    <div class="modal fade" id="maison2">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Appartement moderne</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison2" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Propriété à vendre 1.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Gemini_Generated_Image_vd6alivd6alivd6a.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Gemini_Generated_Image_f26pijf26pijf26p.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Gemini_Generated_Image_sbgeeosbgeeosbge.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Gemini_Generated_Image_q2u39fq2u39fq2u3.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Gemini_Generated_Image_m028f8m028f8m028.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison2"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison2"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Camp-Perrin</p>
+            <p><strong>Surface :</strong> 210 m²</p>
+            <p><strong>Prix :</strong> 30 000 000 HTG</p>
+            <p><strong>Contact :</strong> +509 32 20 6962</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Maison 3 -->
+    <div class="modal fade" id="maison3">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Appartement moderne</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison3" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Propriete a vendre 2.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_46sg2q46sg2q46sg.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_46sg2q46sg2q46sg (1).webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_46sg2q46sg2q46sg (2).webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_eu0wu3eu0wu3eu0w.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_eu0wu3eu0wu3eu0w (1).webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_eu0wu3eu0wu3eu0w (2).webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_cr5qrtcr5qrtcr5q.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison3"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison3"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Bergeaud</p>
+            <p><strong>Surface :</strong> 220 m²</p>
+            <p><strong>Prix :</strong> 35 000 000 HTG</p>
+            <p><strong>Contact :</strong> +509 3220 6962</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Maison 4 -->
+    <div class="modal fade" id="maison4">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Maison 4 chambres</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison4" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/PV 2 chambres ou +.jpg"
+                    class="d-block w-100"
+                    alt=""
+                    height="500"
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_qe7i29qe7i29qe7i.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_qb9qkwqb9qkwqb9q.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_j93vr6j93vr6j93v.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_zg401bzg401bzg40.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_hwlauihwlauihwla.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison4"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison4"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Torbeck</p>
+            <p><strong>Surface :</strong> 160 m²</p>
+            <p><strong>Prix :</strong>1 000 000 HTG</p>
+            <p><strong>Contact :</strong> +509 3220 6962</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Maison 5 -->
+    <div class="modal fade" id="maison5">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Maison 3 chambres</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison5" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/PV Maison 2 chambre ou +.jpeg"
+                    class="d-block w-100"
+                    alt=""
+                    height="500"
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_aexugxaexugxaexu.webp"
+                    class="d-block w-100"
+                    alt=""
+                    height="500"
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_l183g4l183g4l183.webp"
+                    class="d-block w-100"
+                    alt=""
+                    height="500"
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Salle de bain.webp"
+                    class="d-block w-100"
+                    alt=""
+                    height="500"
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Terrasse couverte.webp"
+                    class="d-block w-100"
+                    alt=""
+                    height="500"
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison5"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison5"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Torbeck</p>
+            <p><strong>Surface :</strong> 100 m²</p>
+            <p><strong>Prix :</strong> 750 000 HTG</p>
+            <p><strong>Contact :</strong> +509 3220 6962</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Maison 6 -->
+    <div class="modal fade" id="maison6">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Appartement moderne avec Piscine</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison6" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/M+ Piscine.webp"
+                    class="d-block w-100"
+                    alt=""
+                    height="500"
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_m7325pm7325pm732.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_m7325pm7325pm732 (1).webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_m7325pm7325pm732 (2).webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_m7325pm7325pm732 (3).webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_s4r5g4s4r5g4s4r5.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison6"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison6"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Les Cayes</p>
+            <p><strong>Surface :</strong> 280 m²</p>
+            <p><strong>Prix :</strong> 80 000 000 HTG</p>
+            <p><strong>Contact :</strong> +509 3220 6962</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Maison 7 -->
+    <div class="modal fade" id="maison7">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Appartement moderne</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison6" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/image3_maison.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/image2_maison.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/image2_maison.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison6"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison6"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Torbeck</p>
+            <p><strong>Surface :</strong> 220 m²</p>
+            <p><strong>Prix :</strong> 55 000 HTG</p>
+            <p><strong>Contact :</strong> +509 0000 0000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Maison 8 -->
+    <div class="modal fade" id="maison8">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Appartement moderne</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison8" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Villa with pool.webp"
+                    class="d-block w-100"
+                    alt=""
+                    height="500"
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_7r17ya7r17ya7r17.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/Gemini_Generated_Image_7r17ya7r17ya7r17.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison8"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison8"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Bergeaud</p>
+            <p><strong>Surface :</strong> 270 m²</p>
+            <p><strong>Prix :</strong> 75 000 000 HTG</p>
+            <p><strong>Contact :</strong> +509 3220 6962</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Maison 9 -->
+    <div class="modal fade" id="maison9">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Building 12 etages</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison9" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="IMG/BG.webp" class="d-block w-100" alt="" />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/image2_maison.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison9"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison9"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Aquin</p>
+            <p><strong>Surface :</strong> 860 m²</p>
+            <p><strong>Prix :</strong> 420 000 000 HTG</p>
+            <p><strong>Contact :</strong> +509 3220 6962</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Maison 10 -->
+    <div class="modal fade" id="maison10">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Commercial Building</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison10" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="IMG/BG+.webp" class="d-block w-100" alt="" />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/image2_maison.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison10"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison10"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Les Cayes</p>
+            <p><strong>Surface :</strong> 920 m²</p>
+            <p><strong>Prix :</strong> 550 000 000 HTG</p>
+            <p><strong>Contact :</strong> +509 3220 6962</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Maison 11 -->
+    <div class="modal fade" id="maison11">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Residential Building</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison11" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="IMG/BG3.webp" class="d-block w-100" alt="" />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/image2_maison.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison11"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison11"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Port-Salut</p>
+            <p><strong>Surface :</strong> 620 m²</p>
+            <p><strong>Prix :</strong> 355 000 000 HTG</p>
+            <p><strong>Contact :</strong> +509 3220 6962</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Maison 12 -->
+    <div class="modal fade" id="maison12">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Industrial Building</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison12" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="IMG/BG2.webp" class="d-block w-100" alt="" />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/image2_maison.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison12"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison12 "
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Torbeck</p>
+            <p><strong>Surface :</strong> 520 m²</p>
+            <p><strong>Prix :</strong> 255 000 000 HTG</p>
+            <p><strong>Contact :</strong> +509 3220 6962</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Maison 13 -->
+    <div class="modal fade" id="maison13">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">1 Hectar de Terrain</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison13" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Gemini_Generated_Image_db5adgdb5adgdb5a.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison1"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison1"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Les Cayes</p>
+            <p><strong>Surface :</strong> 10 000 m²</p>
+            <p><strong>Prix :</strong> 100 000 000 HTG</p>
+            <p><strong>Contact :</strong> +509 3220 6962</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Maison 14 -->
+    <div class="modal fade" id="maison14">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">1 Carreau de terre</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison1" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/Gemini_Generated_Image_rt24ydrt24ydrt24.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison1"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison1"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong>Port-Salut</p>
+            <p><strong>Surface :</strong> 12 900 m²</p>
+            <p><strong>Prix :</strong> 145 000 000 HTG</p>
+            <p><strong>Contact :</strong> +509 3220 6962</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Maison 15 -->
+    <div class="modal fade" id="maison15">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Villa avec balcon</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison1" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/propriete a louer 1.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/image5_maison.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/image6_maison.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison1"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison1"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Les Cayes</p>
+            <p><strong>Surface :</strong> 180 m²</p>
+            <p><strong>Prix :</strong> 45 000 HTG / mois</p>
+            <p><strong>Contact :</strong> +509 0000 0000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Maison 16 -->
+    <div class="modal fade" id="maison16">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Villa avec balcon</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div id="carouselMaison1" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="IMG/propriete a louer 1.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/image5_maison.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+
+                <div class="carousel-item">
+                  <img
+                    src="IMG/image6_maison.webp"
+                    class="d-block w-100"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselMaison1"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselMaison1"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <p class="mt-4"><strong>Adresse :</strong> Les Cayes</p>
+            <p><strong>Surface :</strong> 180 m²</p>
+            <p><strong>Prix :</strong> 45 000 HTG / mois</p>
+            <p><strong>Contact :</strong> +509 0000 0000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="comparatif">
+      <div class="section-header">
+        <h2>Comparatif des biens à vendre</h2>
+        <p>
+          Comparez rapidement les caractéristiques principales de nos propriétés
+          en vente.
+        </p>
+      </div>
+
+      <div class="comparatif-scroll">
+        <table class="comparatif-table">
+          <thead>
+            <tr>
+              <th>Photo</th>
+              <th>Bien</th>
+              <th>Ville</th>
+              <th>Superficie</th>
+              <th>Chambres</th>
+              <th>Prix</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img
+                  src="IMG/Maison avec balcon.webp"
+                  alt="Villa avec balcon"
+                />
+              </td>
+              <td>Villa avec balcon</td>
+              <td>Les Cayes</td>
+              <td>180 m²</td>
+              <td>6</td>
+              <td>25 000 000 HTG</td>
+              <td>
+                <button
+                  class="btn btn-details"
+                  data-bs-toggle="modal"
+                  data-bs-target="#maison1"
+                >
+                  Voir détails
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="IMG/Propriete a vendre 2.webp"
+                  alt="Appartement moderne"
+                />
+              </td>
+              <td>Appartement moderne</td>
+              <td>Bergeaud</td>
+              <td>220 m²</td>
+              <td>7</td>
+              <td>35 000 000 HTG</td>
+              <td>
+                <button
+                  class="btn btn-details"
+                  data-bs-toggle="modal"
+                  data-bs-target="#maison2"
+                >
+                  Voir détails
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="IMG/PV 2 chambres ou +.webp"
+                  alt="Maison 2 chambres"
+                />
+              </td>
+              <td>Maison 4 chambres</td>
+              <td>Torbeck</td>
+              <td>160 m²</td>
+              <td>4</td>
+              <td>1 000 000 HTG</td>
+              <td>
+                <button
+                  class="btn btn-details"
+                  data-bs-toggle="modal"
+                  data-bs-target="#maison7"
+                >
+                  Voir détails
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="IMG/PV Maison 2 chambre ou +.webp"
+                  alt="Maison 3 chambres"
+                />
+              </td>
+              <td>Maison 3 chambres</td>
+              <td>Torbeck</td>
+              <td>100 m²</td>
+              <td>3</td>
+              <td>750 000 HTG</td>
+              <td>
+                <button
+                  class="btn btn-details"
+                  data-bs-toggle="modal"
+                  data-bs-target="#maison8"
+                >
+                  Voir détails
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <img src="IMg/logo-fond-blanc.svg" alt="LakAI" class="footer-logo" />
+
+        <h2>Votre futur commence ici.</h2>
+
+        <p>
+          LakAI vous accompagne dans tous vos projets immobiliers aux Cayes et
+          partout en Haïti.
+        </p>
+      </div>
+
+      <div class="footer-middle">
+        <a href="index.html">Accueil</a>
+
+        <a href="apropos.html">À propos</a>
+
+        <a href="proprietes.html">Acheter</a>
+
+        <a href="location.html">Louer</a>
+
+        <a href="estimations.html">Estimer</a>
+
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-contact">
+        <div class="contact-box">
+          <img src="Webfonts/location-dot-solid.svg" alt="" />
+          <span>Les Cayes, Haïti</span>
+        </div>
+
+        <div class="contact-box">
+          <img src="Webfonts/phone-solid.svg" alt="" />
+          <span>+509 4797-5463</span>
+        </div>
+
+        <div class="contact-box">
+          <img src="Webfonts/envelope-solid.svg" alt="" />
+          <span>contact@lakai.ht</span>
+        </div>
+      </div>
+
+      <div class="footer-social">
+        <a href="#"><img src="Webfonts/facebook.svg" alt="" /></a>
+
+        <a href="#"><img src="Webfonts/instagram.svg" alt="" /></a>
+
+        <a href="#"><img src="Webfonts/twitter.svg" alt="" /></a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 LakAI Agence Immobilière • Tous droits réservés</p>
+      </div>
+    </footer>
+  </body>
+</html>
